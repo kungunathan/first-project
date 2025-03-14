@@ -1,14 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
-const name = ['Nathaniel', 'Ian']
-
-function Post(){
-    const chosenName = Math.random() > 0.5 ? name[0] : name[1];
+import classes from './Post.module.css'
+function Post(props){
     return(
-    <div>
-        <p>{chosenName}</p>
-        <p>Nextjs is awesome!</p>
-        
+    <div className={classes.post}>
+        <p classname={classes.author}>{props.author}</p>
+        <p className={classes.text}>{props.body}</p>
     </div>
     );
 }
-export default Post();
+export default Post
